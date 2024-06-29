@@ -6,7 +6,7 @@ from aiogram.fsm.storage.redis import RedisStorage
 from aiogram import Bot, Dispatcher
 
 
-r = Redis(host='localhost', port=6379, decode_responses=True)
+r = Redis(host='redis', port=6379, decode_responses=True)  # Hardcoded Redis host
 storage = RedisStorage(redis=r)
 bot = Bot(token=config.bot_token)
 dp = Dispatcher(storage=storage)

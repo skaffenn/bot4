@@ -13,8 +13,5 @@ RUN pip install --no-cache-dir -r requirements.txt
 # Expose the port the app runs on
 EXPOSE 8000
 
-# Define environment variable (optional)
-ENV NAME World
-
 # Run main.py when the container launches
 CMD ["python", "main.py"]
