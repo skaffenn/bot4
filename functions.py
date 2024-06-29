@@ -29,6 +29,7 @@ async def answer_voice(message: types.Message, state: FSMContext):
     await send_voice(message, ovoice_path)
     await state.update_data(thread_id=thread_id)
     await state.set_state(UsersThreadIds.thread_id)
+    clear_cache([ivoice_path, ovoice_path])
 
 
 async def download_voice(message: types.Message, ivoice_path: str):
